@@ -1,0 +1,4 @@
+# English strings go here for Rails i18n
+ru:
+  # my_label: "My label"
+  field_group_of_authors: Группа авторов
