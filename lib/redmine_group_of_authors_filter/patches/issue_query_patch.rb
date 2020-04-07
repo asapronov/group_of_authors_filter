@@ -5,8 +5,8 @@ module RedmineGroupOfAuthorsFilter
         base.send(:include, InstanceMethods)
         base.class_eval do
           unloadable
-          alias_method_chain :initialize_available_filters,
-                             :group_of_authors_filter
+          alias_method :initialize_available_filters_without_group_of_authors_filter, :initialize_available_filters
+          alias_method :initialize_available_filters, :initialize_available_filters_with_group_of_authors_filter
         end
       end
 
